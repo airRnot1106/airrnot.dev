@@ -58,6 +58,7 @@
     "jsdom": "^27.4.0",
     "lefthook": "^2.0.15",
     "markuplint": "^4.14.0",
+    "msw": "^2.12.7",
     "npm-run-all2": "^8.0.4",
     "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
@@ -67,5 +68,10 @@
     "typescript": "^5",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
