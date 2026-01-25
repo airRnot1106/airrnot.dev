@@ -24,3 +24,4 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm oxlint --type-aware --type-check --format=github && pnpm eslint
       - run: pnpm markuplint \"src/**/*.{html,jsx,tsx}\" --problem-only
+      - run: pnpm knip

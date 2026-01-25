@@ -16,7 +16,8 @@
     "test:unit": "vitest --project=unit",
     "test:storybook": "vitest --project=storybook",
     "storybook": "storybook dev -p 6006 --no-open",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "knip": "knip"
   },
   "dependencies": {
     "next": "16.1.4",
@@ -56,6 +57,7 @@
     "eslint-plugin-storybook": "^10.2.0",
     "fast-check": "^4.5.3",
     "jsdom": "^27.4.0",
+    "knip": "^5.82.1",
     "lefthook": "^2.0.15",
     "markuplint": "^4.14.0",
     "msw": "^2.12.7",
