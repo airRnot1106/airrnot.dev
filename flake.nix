@@ -30,6 +30,7 @@
               gitleaks
               nixfmt
               nodejs_24
+              pnpm
             ];
           };
         }
