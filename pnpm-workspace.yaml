@@ -9,3 +9,4 @@ minimumReleaseAge: 2880
 
 onlyBuiltDependencies:
   - esbuild
+  - lefthook
