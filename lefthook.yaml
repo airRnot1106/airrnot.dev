@@ -5,7 +5,7 @@ pre-commit:
       run: gitleaks dir --verbose --no-banner
 
     lint-code:
-      glob: '*.{js,ts,jsx,tsx}'
+      glob: '*.{js,cjs,mjs,ts,cts,mts}'
       run: pnpm oxlint --type-aware --type-check --fix {staged_files} && pnpm eslint --fix {staged_files}
       stage_fixed: true
 
@@ -15,6 +15,6 @@ pre-commit:
       stage_fixed: true
 
     format:
-      glob: '*.{js,ts,jsx,tsx,json,yml,yaml,md}'
+      glob: '*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,yml,yaml,md}'
       run: pnpm oxfmt --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
