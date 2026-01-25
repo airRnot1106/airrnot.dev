@@ -33,6 +33,9 @@ importers:
       '@pandacss/eslint-plugin':
         specifier: ^0.3.0
         version: 0.3.0(eslint@9.39.2)(typescript@5.9.3)
+      '@tsconfig/strictest':
+        specifier: ^2.0.8
+        version: 2.0.8
       '@types/node':
         specifier: ^20
         version: 20.19.30
@@ -1201,6 +1204,9 @@ packages:
 
   '@ts-morph/common@0.28.1':
     resolution: {integrity: sha512-W74iWf7ILp1ZKNYXY5qbddNaml7e9Sedv5lvU1V8lftlitkc9Pq1A+jlH23ltDgWYeZFFEqGCD1Ies9hqu3O+g==}
+
+  '@tsconfig/strictest@2.0.8':
+    resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -5283,6 +5289,8 @@ snapshots:
       minimatch: 10.0.3
       path-browserify: 1.0.1
       tinyglobby: 0.2.15
+
+  '@tsconfig/strictest@2.0.8': {}
 
   '@tybys/wasm-util@0.10.1':
     dependencies:

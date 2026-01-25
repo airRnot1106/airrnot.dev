@@ -24,6 +24,7 @@
     "@markuplint/react-spec": "^4.5.22",
     "@pandacss/dev": "^1.8.1",
     "@pandacss/eslint-plugin": "^0.3.0",
+    "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
