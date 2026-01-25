@@ -1,5 +1,5 @@
 import { keepSortedCss } from '@airrnot/keep-sorted-css';
-// import panda from '@pandacss/eslint-plugin';
+import panda from '@pandacss/eslint-plugin';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
@@ -42,14 +42,14 @@ const eslintConfig = defineConfig([
   },
   reactCompiler.configs.recommended,
   reactYouMightNotNeedAnEffect.configs.recommended,
-  // {
-  //   name: 'panda/recommended',
-  //   plugins: { '@pandacss': panda },
-  //   rules: {
-  //     ...panda.configs.recommended.rules,
-  //     '@pandacss/no-hardcoded-color': 'off',
-  //   },
-  // },
+  {
+    name: 'panda/recommended',
+    plugins: { '@pandacss': panda },
+    rules: {
+      ...panda.configs.recommended.rules,
+      '@pandacss/no-hardcoded-color': 'off',
+    },
+  },
   ...storybook.configs['flat/recommended'],
   command({
     commands: [...builtinCommands, keepSortedCss],
