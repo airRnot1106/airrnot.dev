@@ -72,7 +72,7 @@
     "npm-run-all2": "^8.0.4",
     "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
-    "oxlint-tsgolint": "^0.11.1",
+    "oxlint-tsgolint": "^0.11.4",
     "playwright": "^1.58.1",
     "storybook": "^10.2.0",
     "typescript": "^5",
