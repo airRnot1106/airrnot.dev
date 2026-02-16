@@ -1,9 +1,11 @@
 'use client';
 
-import { Menu, MenuButton, MenuItem, MenuItems, MenuProps } from '@headlessui/react';
+import type { MenuProps } from '@headlessui/react';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Sun, Moon, Check } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { FC, Fragment, useSyncExternalStore } from 'react';
+import type { FC } from 'react';
+import { Fragment, useSyncExternalStore } from 'react';
 import { match } from 'ts-pattern';
 
 import { sva } from '../../../../../styled-system/css';
