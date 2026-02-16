@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
+import { css } from '../../styled-system/css';
 import { MswProvider } from '../libs/msw/msw-provider';
 import './globals.css';
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
+      <body
+        // @keep-sorted-css
+        className={css({
+          position: 'relative',
+          isolation: 'isolate',
+        })}
+      >
         <MswProvider>{children}</MswProvider>
       </body>
     </html>

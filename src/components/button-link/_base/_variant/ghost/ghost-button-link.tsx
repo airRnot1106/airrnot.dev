@@ -41,7 +41,8 @@ const style = cva({
     transitionDuration: '0.2s',
     transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
     cursor: 'pointer',
-    '--size-base': 'var(--spacing-1)',
+    '--_button-height': 'var(--button-height)',
+    '--_button-padding-inline': 'var(--button-padding-inline)',
     _hover: {
       backgroundColor:
         'color-mix(in oklab, var(--colors-base), var(--color-mix-base) var(--color-mix-ratio))',
@@ -56,24 +57,24 @@ const style = cva({
     },
     size: {
       xs: {
-        height: 'calc(var(--size-base) * 6)',
-        paddingInline: '2',
+        height: 'var(--_button-height,var(--spacing-6))',
+        paddingInline: 'var(--_button-padding-inline, var(--spacing-2))',
       },
       sm: {
-        height: 'calc(var(--size-base) * 8)',
-        paddingInline: '4',
+        height: 'var(--_button-height,var(--spacing-8))',
+        paddingInline: 'var(--_button-padding-inline, var(--spacing-4))',
       },
       md: {
-        height: 'calc(var(--size-base) * 10)',
-        paddingInline: '6',
+        height: 'var(--_button-height,var(--spacing-10))',
+        paddingInline: 'var(--_button-padding-inline, var(--spacing-6))',
       },
       lg: {
-        height: 'calc(var(--size-base) * 12)',
-        paddingInline: '8',
+        height: 'var(--_button-height,var(--spacing-12))',
+        paddingInline: 'var(--_button-padding-inline, var(--spacing-8))',
       },
       xl: {
-        height: 'calc(var(--size-base) * 14)',
-        paddingInline: '10',
+        height: 'var(--_button-height,var(--spacing-14))',
+        paddingInline: 'var(--_button-padding-inline, var(--spacing-10))',
       },
     } satisfies Record<Required<GhostButtonLinkProps<unknown>>['size'], SystemStyleObject>,
   },

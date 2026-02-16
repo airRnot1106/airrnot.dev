@@ -1,18 +1,17 @@
 'use client';
 
-import type { MenuProps } from '@headlessui/react';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { Menu } from '@base-ui/react/menu';
 import { Sun, Moon, Check } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import type { FC } from 'react';
-import { Fragment, useSyncExternalStore } from 'react';
+import { useSyncExternalStore } from 'react';
 import { match } from 'ts-pattern';
 
 import { sva } from '../../../../../styled-system/css';
 import { Button } from '../../../../components/button';
 import { SiteTheme } from '../../schemas';
 
-export type SiteThemeSwitchDropdownProps = MenuProps;
+export type SiteThemeSwitchDropdownProps = Menu.Root.Props;
 
 const ICON_SIZE = 32;
 
@@ -35,44 +34,69 @@ export const SiteThemeSwitchDropdown: FC<SiteThemeSwitchDropdownProps> = () => {
   const { items, item, check } = style();
 
   return (
-    <Menu>
-      <MenuButton as={Fragment}>
-        <Button aria-label="テーマを変更する" type="button" variant="ghost">
-          {match(resolvedTheme)
-            .with(SiteTheme.enum.light, () => <Sun size={ICON_SIZE} />)
-            .with(SiteTheme.enum.dark, () => <Moon size={ICON_SIZE} />)
-            .otherwise(() => (
-              <Sun size={ICON_SIZE} />
-            ))}
-        </Button>
-      </MenuButton>
-      <MenuItems
-        anchor={{
-          to: 'bottom',
-          gap: 8,
-        }}
-        className={items}
-      >
-        <MenuItem>
-          <button className={item} type="button" onClick={handleClick(SiteTheme.enum.light)}>
-            ライトテーマ
-            {theme === SiteTheme.enum.light && <Check className={check} />}
-          </button>
-        </MenuItem>
-        <MenuItem>
-          <button className={item} type="button" onClick={handleClick(SiteTheme.enum.dark)}>
-            ダークテーマ
-            {theme === SiteTheme.enum.dark && <Check className={check} />}
-          </button>
-        </MenuItem>
-        <MenuItem>
-          <button className={item} type="button" onClick={handleClick(SiteTheme.enum.system)}>
-            システムテーマ
-            {theme === SiteTheme.enum.system && <Check className={check} />}
-          </button>
-        </MenuItem>
-      </MenuItems>
-    </Menu>
+    <Menu.Root>
+      <Menu.Trigger
+        nativeButton
+        render={(props) => (
+          <Button aria-label="テーマを変更する" variant="ghost" {...props}>
+            {match(resolvedTheme)
+              .with(SiteTheme.enum.light, () => <Sun size={ICON_SIZE} />)
+              .with(SiteTheme.enum.dark, () => <Moon size={ICON_SIZE} />)
+              .otherwise(() => (
+                <Sun size={ICON_SIZE} />
+              ))}
+          </Button>
+        )}
+      />
+      <Menu.Portal>
+        <Menu.Positioner>
+          <Menu.Popup className={items}>
+            <Menu.Item
+              nativeButton
+              render={(props) => (
+                <button
+                  className={item}
+                  type="button"
+                  onClick={handleClick(SiteTheme.enum.light)}
+                  {...props}
+                >
+                  ライトテーマ
+                  {theme === SiteTheme.enum.light && <Check className={check} />}
+                </button>
+              )}
+            />
+            <Menu.Item
+              nativeButton
+              render={(props) => (
+                <button
+                  className={item}
+                  type="button"
+                  onClick={handleClick(SiteTheme.enum.dark)}
+                  {...props}
+                >
+                  ダークテーマ
+                  {theme === SiteTheme.enum.dark && <Check className={check} />}
+                </button>
+              )}
+            />
+            <Menu.Item
+              nativeButton
+              render={(props) => (
+                <button
+                  className={item}
+                  type="button"
+                  onClick={handleClick(SiteTheme.enum.system)}
+                  {...props}
+                >
+                  システムテーマ
+                  {theme === SiteTheme.enum.system && <Check className={check} />}
+                </button>
+              )}
+            />
+          </Menu.Popup>
+        </Menu.Positioner>
+      </Menu.Portal>
+    </Menu.Root>
   );
 };
 
