@@ -2,8 +2,7 @@ pre-commit:
   parallel: true
   commands:
     gitleaks:
-      run: gitleaks dir --verbose --no-banner
-
+      run: gitleaks git --pre-commit --staged --verbose --no-banner
     lint-code:
       glob: '*.{js,cjs,mjs,ts,cts,mts}'
       run: pnpm oxlint --type-aware --type-check --fix {staged_files} && pnpm eslint --fix {staged_files}
