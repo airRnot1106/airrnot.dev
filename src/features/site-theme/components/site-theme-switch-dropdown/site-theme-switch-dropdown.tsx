@@ -15,7 +15,7 @@ export type SiteThemeSwitchDropdownProps = Menu.Root.Props;
 
 const ICON_SIZE = 32;
 
-export const SiteThemeSwitchDropdown: FC<SiteThemeSwitchDropdownProps> = () => {
+export const SiteThemeSwitchDropdown: FC<SiteThemeSwitchDropdownProps> = (props) => {
   const { theme, resolvedTheme, setTheme } = useTheme();
   const mounted = useSyncExternalStore(
     () => () => {},
@@ -34,7 +34,7 @@ export const SiteThemeSwitchDropdown: FC<SiteThemeSwitchDropdownProps> = () => {
   const { items, item, check } = style();
 
   return (
-    <Menu.Root>
+    <Menu.Root {...props}>
       <Menu.Trigger
         nativeButton
         render={(props) => (
