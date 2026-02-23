@@ -34,6 +34,7 @@ const style = cva({
   // @keep-sorted-css
   base: {
     display: 'inline-grid',
+    justifyContent: 'var(--_button-justify-content,center)',
     alignItems: 'center',
     gridAutoFlow: 'column',
     border: '1px solid',
@@ -46,6 +47,7 @@ const style = cva({
     transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
     cursor: 'pointer',
     '--_button-height': 'var(--button-height)',
+    '--_button-justify-content': 'var(--button-justify-content)',
     '--_button-padding-inline': 'var(--button-padding-inline)',
     _hover: {
       backgroundColor:
