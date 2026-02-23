@@ -51,48 +51,18 @@ export const SiteThemeSwitchDropdown: FC<SiteThemeSwitchDropdownProps> = (props)
       <Menu.Portal>
         <Menu.Positioner>
           <Menu.Popup className={items}>
-            <Menu.Item
-              nativeButton
-              render={(props) => (
-                <button
-                  className={item}
-                  type="button"
-                  onClick={handleClick(SiteTheme.enum.light)}
-                  {...props}
-                >
-                  ライトテーマ
-                  {theme === SiteTheme.enum.light && <Check className={check} />}
-                </button>
-              )}
-            />
-            <Menu.Item
-              nativeButton
-              render={(props) => (
-                <button
-                  className={item}
-                  type="button"
-                  onClick={handleClick(SiteTheme.enum.dark)}
-                  {...props}
-                >
-                  ダークテーマ
-                  {theme === SiteTheme.enum.dark && <Check className={check} />}
-                </button>
-              )}
-            />
-            <Menu.Item
-              nativeButton
-              render={(props) => (
-                <button
-                  className={item}
-                  type="button"
-                  onClick={handleClick(SiteTheme.enum.system)}
-                  {...props}
-                >
-                  システムテーマ
-                  {theme === SiteTheme.enum.system && <Check className={check} />}
-                </button>
-              )}
-            />
+            <Menu.Item className={item} onClick={handleClick(SiteTheme.enum.light)}>
+              ライトテーマ
+              {theme === SiteTheme.enum.light && <Check className={check} />}
+            </Menu.Item>
+            <Menu.Item className={item} onClick={handleClick(SiteTheme.enum.dark)}>
+              ダークテーマ
+              {theme === SiteTheme.enum.dark && <Check className={check} />}
+            </Menu.Item>
+            <Menu.Item className={item} onClick={handleClick(SiteTheme.enum.system)}>
+              システムテーマ
+              {theme === SiteTheme.enum.system && <Check className={check} />}
+            </Menu.Item>
           </Menu.Popup>
         </Menu.Positioner>
       </Menu.Portal>
