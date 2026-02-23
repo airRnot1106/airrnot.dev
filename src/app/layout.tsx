@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
 import type { ReactNode } from 'react';
 
 import { css } from '../../styled-system/css';
@@ -16,15 +17,19 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <body
         // @keep-sorted-css
         className={css({
           position: 'relative',
           isolation: 'isolate',
+          color: 'text',
+          backgroundColor: 'base',
         })}
       >
-        <MswProvider>{children}</MswProvider>
+        <MswProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </MswProvider>
       </body>
     </html>
   );
