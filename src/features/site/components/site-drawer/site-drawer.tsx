@@ -15,7 +15,7 @@ export type SiteDrawerProps = DrawerRootProps;
 
 export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
   return (
-    <Drawer.Root swipeDirection="right" {...props}>
+    <Drawer.Root {...props}>
       <Drawer.Trigger
         render={(props) => (
           <Button
