@@ -119,7 +119,6 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
               // @keep-sorted-css
               className={css({
                 width: 'min(100%, var(--spacing-96))',
-                margin: '0 auto',
               })}
             >
               <div
@@ -129,6 +128,8 @@ export const SiteDrawer: FC<SiteDrawerProps> = (props) => {
                   alignItems: 'center',
                   gap: '2',
                   gridAutoFlow: 'column',
+                  maxWidth: '48',
+                  marginInline: 'auto',
                 })}
               >
                 <SiteThemeSwitchDropdown />
