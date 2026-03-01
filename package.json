@@ -57,7 +57,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-command": "^3.4.0",
+    "eslint-plugin-command": "^3.5.2",
     "eslint-plugin-oxlint": "^1.50.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-compiler": "19.1.0-rc.2",
