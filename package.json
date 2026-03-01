@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@airrnot/keep-sorted-css": "^0.0.1",
-    "@chromatic-com/storybook": "^5.0.0",
+    "@chromatic-com/storybook": "^5.0.1",
     "@markuplint/jsx-parser": "^4.7.23",
     "@markuplint/react-spec": "^4.5.22",
     "@pandacss/dev": "^1.8.1",
