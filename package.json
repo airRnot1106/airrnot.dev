@@ -65,7 +65,7 @@
     "eslint-plugin-storybook": "^10.2.0",
     "fast-check": "^4.5.3",
     "jsdom": "^28.1.0",
-    "knip": "^5.82.1",
+    "knip": "^5.85.0",
     "lefthook": "^2.1.1",
     "markuplint": "^4.14.1",
     "msw": "^2.12.10",
