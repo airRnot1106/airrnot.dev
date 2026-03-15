@@ -66,7 +66,7 @@
     "fast-check": "^4.5.3",
     "jsdom": "^28.1.0",
     "knip": "^5.85.0",
-    "lefthook": "^2.1.1",
+    "lefthook": "^2.1.4",
     "markuplint": "^4.14.1",
     "msw": "^2.12.10",
     "npm-run-all2": "^8.0.4",
