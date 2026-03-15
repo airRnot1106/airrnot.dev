@@ -70,7 +70,7 @@
     "markuplint": "^4.14.1",
     "msw": "^2.12.10",
     "npm-run-all2": "^8.0.4",
-    "oxfmt": "^0.26.0",
+    "oxfmt": "^0.40.0",
     "oxlint": "^1.47.0",
     "oxlint-tsgolint": "^0.15.0",
     "playwright": "^1.58.2",
